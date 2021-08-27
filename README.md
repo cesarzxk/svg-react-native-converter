@@ -3,7 +3,7 @@
 Image of the application in operation.
 
 <p align="center">
-  <img alt="ScreenShot01" src="https://user-images.githubusercontent.com/43748428/131182977-56df6f72-1f13-40ca-9968-583ccfb3626d.png" width="400px">
+  <img alt="ScreenShot01" src="https://user-images.githubusercontent.com/43748428/131182977-56df6f72-1f13-40ca-9968-583ccfb3626d.png" width="800px">
 </p>
  
 ## 🚀 Technologies
