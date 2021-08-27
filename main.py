@@ -5,17 +5,17 @@ Project available in the cesarzxk/svg-react-native-converter repository
 -----------------------------------------------------------------------
 ''')
 
-looping = True;
+looping = True
 
 
 while(looping):
-    filename = input('Entre com o nome do arquivo svg: ').strip() + '.svg'
+    name = input('Entre com o nome do arquivo svg: ').strip()
+    filename =  name + '.svg'
     destiny = input('Entre com o nome do arquivo de saida com extensão (ex: arquivo.js): ')
 
     imports = []
 
-    try:
-            
+    try: 
         with open(filename, 'r') as svg:
             for i in svg:
                 try:
@@ -50,6 +50,11 @@ while(looping):
             with open(destiny, 'w') as destiny:
                 destiny.write("import React from 'react';\n")
                 destiny.write("import Svg,{"+newimports+"}from 'react-native-svg';\n")
+
+                destiny.write("\n")
+
+                destiny.write("export default function "+ name.capitalize() + "(){\n\n")
+                destiny.write("return(\n")
                 
                 for i in svg:
                     if(i[1] == "/"):
@@ -59,6 +64,8 @@ while(looping):
                     else:
                         newi = i[1:].capitalize()
                         destiny.write('<'+newi)
+
+                destiny.write("\n)}")
 
         print('''
 ------------------------Sucesso------------------------
@@ -91,8 +98,3 @@ while(looping):
 <>--------------arquivo não encontrado--------------</>
 -------------------------------------------------------
         ''')
-
-        
-
-
-
