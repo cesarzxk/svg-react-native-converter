@@ -24,7 +24,7 @@ Technologies that I used to develop this application
 **Clone the project and access the folder**
 
 ```bash
-$ git clone https://github.com/cesarzxk/Voltbras-pokemon-menager.git
+$ git clone https://github.com/cesarzxk/svg-react-native-converter.git
 ```
 
 **Follow the steps below**
