@@ -7,6 +7,7 @@ Project available in the cesarzxk/svg-react-native-converter repository
 
 looping = True;
 
+
 while(looping):
     filename = input('Entre com o nome do arquivo svg: ').strip() + '.svg'
     destiny = input('Entre com o nome do arquivo de saida com extensão (ex: arquivo.js): ')
@@ -23,7 +24,12 @@ while(looping):
                     imports.append(newi)
 
                 except:
-                    pass
+                    try:
+                        index  = i.index('/')
+                    except:
+                        newi = i[1:len(i)-2].capitalize()
+                        imports.append(newi)
+                        
             
             if imports[0]=='Svg':
                 imports.pop(0)
@@ -31,6 +37,8 @@ while(looping):
             svg.seek(0)
 
             newimports = ''
+
+            imports = list(set(imports))
 
             for i in imports:
                 if (i == imports[len(imports)-1]):
