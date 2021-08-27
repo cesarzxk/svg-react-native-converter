@@ -1,7 +1,4 @@
-# svg-react-native-converter
- Conversor de arquivos svg para react-native.
- 
- ## 📸 Sreenshots
+## 📸 Sreenshots
 
 Image of the application in operation.
 
